@@ -29,5 +29,13 @@ class FileUpload {
                 cb(null,filename)
             }
         })
+
+        var upload = multer({
+            storage,
+            limits:{
+                fileSize:1024*1024*10
+            },
+            filefilter:FileUpload.filefilter
+        }).single('companyLogo')
     }
 }
