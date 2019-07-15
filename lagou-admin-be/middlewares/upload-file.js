@@ -13,7 +13,7 @@ class FileUpload {
         }
     }
     uploadFile(req,res,next) {
-        res.set('Content-Type','application/json;charset=utf-8')\
+        res.set('Content-Type','application/json;charset=utf-8')
         let filename = ''
         let storage = multer.diskStorage({
             destination:(req,file,cb)=> {

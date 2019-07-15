@@ -8,7 +8,7 @@ const fileUpload = require('../middlewares/upload-file')
 router.route('/')
     .all(oAuthBase)
     .get(positionController.findAll)
-    .post(fileUpload.uploadFile, positionController.save)
+    //.post(fileUpload.uploadFile, positionController.save)
     .delete(positionController.delete)
 
 router.get('/find', positionController.findMany)
